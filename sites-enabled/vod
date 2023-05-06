@@ -2,13 +2,9 @@ server {
     listen 82;
     server_name example.com;
 
-    root /var/www/videos;
-    location \.mp4$ {
-  root /var/www/videos;
-  mp4;
-  mp4_buffer_size 1m;
-  mp4_max_buffer_size 5m;
-  try_files $uri =404;
-}
-  
+  location / {
+  root /var/www/EsiUnivEducation;
+
   }
+
+}

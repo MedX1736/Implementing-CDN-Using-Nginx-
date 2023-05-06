@@ -1,0 +1,13 @@
+server {
+    listen 81;
+    server_name db.com;
+ 
+  root /var/db;
+  location /api {
+    mp4;
+  mp4_buffer_size 1m;
+  mp4_max_buffer_size 5m;
+  try_files $uri =404;
+  }
+}
+  
