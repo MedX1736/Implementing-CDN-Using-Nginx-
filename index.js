@@ -11,6 +11,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   const uploadedFile = req.file;
   console.log("File Uploaded Successfully !");
   console.log("Mime Type"+ uploadedFile.mimetype)
+  res.status(200).json(uploadedFile);
 
   const fileExt = path.extname(uploadedFile.originalname);
 
